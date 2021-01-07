@@ -3,7 +3,7 @@
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    
     justify-content: flex-start;
     width: 100%;
 }
@@ -19,6 +19,7 @@
     width: 100%;
     margin: 1rem 0;
     box-shadow: none;
+    background: none;
 }
 
 .recentQuestion-list li {
@@ -29,12 +30,17 @@
     box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
     margin: 0.5rem;
     border-radius: 0.5rem;
+    background-color: #fff;
     text-align: left;
 }
 
+.recentQuestion-list li p strong{
+    margin-right:0.25rem;
+}
 .recentQuestion-list li p {
     margin: 0.5rem 1rem;
     text-align: left;
     min-width: 200px;
     text-transform: capitalize;
+    display: flex;
 }

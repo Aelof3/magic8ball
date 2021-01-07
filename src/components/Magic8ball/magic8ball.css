@@ -34,8 +34,9 @@
 }
 
 .magic8ball-wrapper {
-    padding: 6.75rem;
+    margin: 6.75rem;
     position: relative;
+    box-shadow: 0 calc(0.85 * var(--side-size)) 150px #000;
 }
 
 
