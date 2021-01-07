@@ -6,7 +6,8 @@ import './recentquestions.css';
 class QuestionsFromRecent extends Component {
     static contextType = UserContext;
     state = {
-        recentQuestions: []
+        recentQuestions: [],
+        interval: null
     }
 
     questionize = (q) => {
@@ -15,12 +16,23 @@ class QuestionsFromRecent extends Component {
         return `${q}?`
     }
 
+    refreshQuestions = () => {
+        this.setState({
+            interval: setInterval(()=>{
+                UserService.getRecentQuestions().then((data) => {
+                    const recentQuestions = data.questions;
+                    this.setState({recentQuestions});
+                });
+            },500)
+        })
+    }
+
     componentDidMount(){
-        UserService.getRecentQuestions().then((data) => {
-            const recentQuestions = data.questions;
-            console.log(recentQuestions);
-            this.setState({recentQuestions});
-        });
+        this.refreshQuestions();
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.state.interval);
     }
 
     render(){
