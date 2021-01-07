@@ -18,6 +18,7 @@ class QuestionsFromRecent extends Component {
     componentDidMount(){
         UserService.getRecentQuestions().then((data) => {
             const recentQuestions = data.questions;
+            console.log(recentQuestions);
             this.setState({recentQuestions});
         });
     }
@@ -28,6 +29,7 @@ class QuestionsFromRecent extends Component {
                 <li key={`${q.user_ask_id}${q.question}${i}`} className="recentQuestion">
                     <p><strong>Q: </strong>{this.questionize(q.question)}</p>
                     <p><strong>A: </strong>{q.answer}</p>
+                    <p className="recentQuestion-askedby">asked by: {q.username}</p>
                 </li>
             )
         });

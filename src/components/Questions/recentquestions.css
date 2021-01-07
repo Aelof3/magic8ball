@@ -44,3 +44,12 @@
     text-transform: capitalize;
     display: flex;
 }
+
+.recentQuestion-list li p.recentQuestion-askedby {
+    width: 100%;
+    text-align: right;
+    justify-content: flex-end;
+    text-transform: lowercase;
+    font-style: italic;
+    color: #666;
+}
