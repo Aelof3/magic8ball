@@ -1,0 +1,387 @@
+:root {
+    --hole-size: 100px;
+}
+
+.ballWrap {
+    position: relative;
+    /* animation: spin 3.23s linear infinite forwards; */
+}
+.ballWrap::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    border-radius:50%;
+    
+}
+
+.ballWrap-overlay svg {
+    position: relative;
+    filter: drop-shadow(1px 1px 5px #000000);
+    -webkit-filter: drop-shadow(1px 1px 5px #000000);
+    -moz-filter: drop-shadow(1px 1px 5px #000000);
+}
+
+.ballWrap .ballWrap-overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: radial-gradient(circle at 0% 50%, rgba(100, 100, 100, 1), rgba(20, 20, 20, 1) 40%, rgba(0, 0, 0, 1) 50%);
+    border-radius:50%;
+    mask-type:alpha;
+    mask-image: radial-gradient(var(--hole-size) at 53% 35% , transparent 99%, black 100%);
+    mask-size: 300%;
+    mask-repeat: no-repeat;
+    mask-position:50% 50%;
+    z-index: 100;
+    display: block;
+    filter: drop-shadow(73px 10px 5px #000000);
+-webkit-filter: drop-shadow(73px 10px 5px #000000);
+-moz-filter: drop-shadow(73px 10px 5px #000000);
+    /* animation: move-hole-2 2.33s linear infinite forwards; */
+}
+
+.ballWrap .ballWrap-overlay::after {
+    content: " ";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top:0;
+    left:0;
+    filter: drop-shadow(73px 10px 5px #000000);
+-webkit-filter: drop-shadow(73px 10px 5px #000000);
+-moz-filter: drop-shadow(73px 10px 5px #000000);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move-hole-2 {
+    0% {
+        mask-position: 0% 50%;
+    }
+    50% {
+        mask-position: 100% 50%;
+    }
+    100% {
+        mask-position: 100% 50%;
+    }
+}
+
+@keyframes move-hole {
+    0% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.0) var(--hole-size) at 0% 50% , transparent 99%, black 100%);
+    }
+    1% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.04) var(--hole-size) at 2% 50% , transparent 99%, black 100%);
+    }
+    2% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.08) var(--hole-size) at 4% 50% , transparent 99%, black 100%);
+    }
+    3% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.12) var(--hole-size) at 6% 50% , transparent 99%, black 100%);
+    }
+    4% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.16) var(--hole-size) at 8% 50% , transparent 99%, black 100%);
+    }
+    5% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.20) var(--hole-size) at 10% 50% , transparent 99%, black 100%);
+    }
+    6% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.24) var(--hole-size) at 12% 50% , transparent 99%, black 100%);
+    }
+    7% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.28) var(--hole-size) at 14% 50% , transparent 99%, black 100%);
+    }
+    8% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.32) var(--hole-size) at 16% 50% , transparent 99%, black 100%);
+    }
+    9% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.36) var(--hole-size) at 18% 50% , transparent 99%, black 100%);
+    }
+    10% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.40) var(--hole-size) at 20% 50% , transparent 99%, black 100%);
+    }
+    11% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.44) var(--hole-size) at 22% 50% , transparent 99%, black 100%);
+    }
+    12% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.48) var(--hole-size) at 24% 50% , transparent 99%, black 100%);
+    }
+    13% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.52) var(--hole-size) at 26% 50% , transparent 99%, black 100%);
+    }
+    14% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.56) var(--hole-size) at 28% 50% , transparent 99%, black 100%);
+    }
+    15% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.60) var(--hole-size) at 30% 50% , transparent 99%, black 100%);
+    }
+    16% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.64) var(--hole-size) at 32% 50% , transparent 99%, black 100%);
+    }
+    17% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.68) var(--hole-size) at 34% 50% , transparent 99%, black 100%);
+    }
+    18% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.72) var(--hole-size) at 36% 50% , transparent 99%, black 100%);
+    }
+    19% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.76) var(--hole-size) at 38% 50% , transparent 99%, black 100%);
+    }
+    20% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.80) var(--hole-size) at 40% 50% , transparent 99%, black 100%);
+    }
+    21% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.84) var(--hole-size) at 42% 50% , transparent 99%, black 100%);
+    }
+    22% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.88) var(--hole-size) at 44% 50% , transparent 99%, black 100%);
+    }
+    23% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.92) var(--hole-size) at 46% 50% , transparent 99%, black 100%);
+    }
+    24% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.96) var(--hole-size) at 48% 50% , transparent 99%, black 100%);
+    }
+    25% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 1.00) var(--hole-size) at 50% 50% , transparent 99%, black 100%);
+    }
+    26% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.96) var(--hole-size) at 52% 50% , transparent 99%, black 100%);
+    }
+    27% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.92) var(--hole-size) at 54% 50% , transparent 99%, black 100%);
+    }
+    28% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.88) var(--hole-size) at 56% 50% , transparent 99%, black 100%);
+    }
+    29% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.84) var(--hole-size) at 58% 50% , transparent 99%, black 100%);
+    }
+    30% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.80) var(--hole-size) at 60% 50% , transparent 99%, black 100%);
+    }
+    31% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.76) var(--hole-size) at 62% 50% , transparent 99%, black 100%);
+    }
+    32% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.72) var(--hole-size) at 64% 50% , transparent 99%, black 100%);
+    }
+    33% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.68) var(--hole-size) at 66% 50% , transparent 99%, black 100%);
+    }
+    34% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.64) var(--hole-size) at 68% 50% , transparent 99%, black 100%);
+    }
+    35% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.60) var(--hole-size) at 70% 50% , transparent 99%, black 100%);
+    }
+    36% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.56) var(--hole-size) at 72% 50% , transparent 99%, black 100%);
+    }
+    37% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.52) var(--hole-size) at 74% 50% , transparent 99%, black 100%);
+    }
+    38% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.48) var(--hole-size) at 76% 50% , transparent 99%, black 100%);
+    }
+    39% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.44) var(--hole-size) at 78% 50% , transparent 99%, black 100%);
+    }
+    40% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.40) var(--hole-size) at 80% 50% , transparent 99%, black 100%);
+    }
+    41% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.36) var(--hole-size) at 82% 50% , transparent 99%, black 100%);
+    }
+    42% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.32) var(--hole-size) at 84% 50% , transparent 99%, black 100%);
+    }
+    43% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.28) var(--hole-size) at 86% 50% , transparent 99%, black 100%);
+    }
+    44% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.24) var(--hole-size) at 88% 50% , transparent 99%, black 100%);
+    }
+    45% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.20) var(--hole-size) at 90% 50% , transparent 99%, black 100%);
+    }
+    46% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.16) var(--hole-size) at 92% 50% , transparent 99%, black 100%);
+    }
+    47% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.12) var(--hole-size) at 94% 50% , transparent 99%, black 100%);
+    }
+    48% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.08) var(--hole-size) at 96% 50% , transparent 99%, black 100%);
+    }
+    49% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.04) var(--hole-size) at 98% 50% , transparent 99%, black 100%);
+    }
+    50% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.00) var(--hole-size) at 100% 50% , transparent 99%, black 100%);
+    }
+    51% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.04) var(--hole-size) at 98% 50% , transparent 99%, black 100%);
+    }
+    52% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.08) var(--hole-size) at 96% 50% , transparent 99%, black 100%);
+    }
+    53% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.12) var(--hole-size) at 94% 50% , transparent 99%, black 100%);
+    }
+    54% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.16) var(--hole-size) at 92% 50% , transparent 99%, black 100%);
+    }
+    55% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.20) var(--hole-size) at 90% 50% , transparent 99%, black 100%);
+    }
+    56% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.24) var(--hole-size) at 88% 50% , transparent 99%, black 100%);
+    }
+    57% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.28) var(--hole-size) at 86% 50% , transparent 99%, black 100%);
+    }
+    58% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.32) var(--hole-size) at 84% 50% , transparent 99%, black 100%);
+    }
+    59% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.36) var(--hole-size) at 82% 50% , transparent 99%, black 100%);
+    }
+    60% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.40) var(--hole-size) at 80% 50% , transparent 99%, black 100%);
+    }
+    61% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.44) var(--hole-size) at 78% 50% , transparent 99%, black 100%);
+    }
+    62% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.48) var(--hole-size) at 76% 50% , transparent 99%, black 100%);
+    }
+    63% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.52) var(--hole-size) at 74% 50% , transparent 99%, black 100%);
+    }
+    64% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.56) var(--hole-size) at 72% 50% , transparent 99%, black 100%);
+    }
+    65% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.60) var(--hole-size) at 70% 50% , transparent 99%, black 100%);
+    }
+    66% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.64) var(--hole-size) at 68% 50% , transparent 99%, black 100%);
+    }
+    67% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.68) var(--hole-size) at 66% 50% , transparent 99%, black 100%);
+    }
+    68% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.72) var(--hole-size) at 64% 50% , transparent 99%, black 100%);
+    }
+    69% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.76) var(--hole-size) at 62% 50% , transparent 99%, black 100%);
+    }
+    70% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.80) var(--hole-size) at 60% 50% , transparent 99%, black 100%);
+    }
+    71% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.84) var(--hole-size) at 58% 50% , transparent 99%, black 100%);
+    }
+    72% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.88) var(--hole-size) at 56% 50% , transparent 99%, black 100%);
+    }
+    73% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.92) var(--hole-size) at 54% 50% , transparent 99%, black 100%);
+    }
+    74% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.96) var(--hole-size) at 52% 50% , transparent 99%, black 100%);
+    }
+    75% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 1.00) var(--hole-size) at 50% 50% , transparent 99%, black 100%);
+    }
+    76% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.96) var(--hole-size) at 48% 50% , transparent 99%, black 100%);
+    }
+    77% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.92) var(--hole-size) at 46% 50% , transparent 99%, black 100%);
+    }
+    78% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.88) var(--hole-size) at 44% 50% , transparent 99%, black 100%);
+    }
+    79% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.84) var(--hole-size) at 42% 50% , transparent 99%, black 100%);
+    }
+    80% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.80) var(--hole-size) at 40% 50% , transparent 99%, black 100%);
+    }
+    81% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.76) var(--hole-size) at 38% 50% , transparent 99%, black 100%);
+    }
+    82% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.72) var(--hole-size) at 36% 50% , transparent 99%, black 100%);
+    }
+    83% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.68) var(--hole-size) at 34% 50% , transparent 99%, black 100%);
+    }
+    84% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.64) var(--hole-size) at 32% 50% , transparent 99%, black 100%);
+    }
+    85% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.60) var(--hole-size) at 30% 50% , transparent 99%, black 100%);
+    }
+    86% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.56) var(--hole-size) at 28% 50% , transparent 99%, black 100%);
+    }
+    87% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.52) var(--hole-size) at 26% 50% , transparent 99%, black 100%);
+    }
+    88% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.48) var(--hole-size) at 24% 50% , transparent 99%, black 100%);
+    }
+    89% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.44) var(--hole-size) at 22% 50% , transparent 99%, black 100%);
+    }
+    90% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.40) var(--hole-size) at 20% 50% , transparent 99%, black 100%);
+    }
+    91% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.36) var(--hole-size) at 18% 50% , transparent 99%, black 100%);
+    }
+    92% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.32) var(--hole-size) at 16% 50% , transparent 99%, black 100%);
+    }
+    93% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.28) var(--hole-size) at 14% 50% , transparent 99%, black 100%);
+    }
+    94% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.24) var(--hole-size) at 12% 50% , transparent 99%, black 100%);
+    }
+    95% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.20) var(--hole-size) at 10% 50% , transparent 99%, black 100%);
+    }
+    96% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.16) var(--hole-size) at 8% 50% , transparent 99%, black 100%);
+    }
+    97% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.12) var(--hole-size) at 6% 50% , transparent 99%, black 100%);
+    }
+    98% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.08) var(--hole-size) at 4% 50% , transparent 99%, black 100%);
+    }
+    99% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.04) var(--hole-size) at 2% 50% , transparent 99%, black 100%);
+    }
+    100% {
+        mask-image: radial-gradient(ellipse calc(var(--hole-size) * 0.0) var(--hole-size) at 0% 50% , transparent 99%, black 100%);
+    }
+  }
