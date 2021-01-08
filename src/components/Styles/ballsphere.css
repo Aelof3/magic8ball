@@ -1,9 +1,10 @@
 :root {
-    --hole-size: 100px;
+    --hole-size: calc(0.5 * (7vw + 100px));
 }
 
 .ballWrap {
     position: relative;
+    padding: 2vw;
     /* animation: spin 3.23s linear infinite forwards; */
 }
 .ballWrap::before {

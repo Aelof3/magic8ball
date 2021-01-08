@@ -1,5 +1,5 @@
 :root {
-    --side-size: 220px;
+    --side-size: calc(10vw + 100px);
     --color-1: #e6194B;
     --color-2: #3cb44b;
     --color-3: #ffe119;
