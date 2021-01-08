@@ -36,15 +36,16 @@
     background-image: radial-gradient(circle at 0% 50%, rgba(100, 100, 100, 1), rgba(20, 20, 20, 1) 40%, rgba(0, 0, 0, 1) 50%);
     border-radius:50%;
     mask-type:alpha;
-    mask-image: radial-gradient(var(--hole-size) at 53% 35% , transparent 99%, black 100%);
+    mask-image: radial-gradient(var(--hole-size) at 52% 35% , transparent 99%, black 100%);
     mask-size: 300%;
     mask-repeat: no-repeat;
     mask-position:50% 50%;
     z-index: 100;
     display: block;
     filter: drop-shadow(73px 10px 5px #000000);
--webkit-filter: drop-shadow(73px 10px 5px #000000);
--moz-filter: drop-shadow(73px 10px 5px #000000);
+    -webkit-filter: drop-shadow(73px 10px 5px #000000);
+    -moz-filter: drop-shadow(73px 10px 5px #000000);
+    transition-duration: 0s;
     /* animation: move-hole-2 2.33s linear infinite forwards; */
 }
 
