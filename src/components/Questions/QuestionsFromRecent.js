@@ -48,7 +48,7 @@ class QuestionsFromRecent extends Component {
 
         return(
             <ul className="recentQuestion-list">
-                <li className="recentQuestion">10 most recent questions:</li>
+                <li className="recentQuestion">10 most recent questions from everybody:</li>
                 {rq}
             </ul>
         )

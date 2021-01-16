@@ -1,10 +1,10 @@
 :root {
-    --hole-size: calc(0.5 * (7vw + 100px));
+    --hole-size: min(calc(7vw + 50px), 90px);
 }
 
 .ballWrap {
     position: relative;
-    padding: 2vw;
+    padding: min(2vw, 20px);
     /* animation: spin 3.23s linear infinite forwards; */
 }
 .ballWrap::before {
@@ -15,15 +15,7 @@
     width:100%;
     height:100%;
     background-color: black;
-    border-radius:50%;
-    
-}
-
-.ballWrap-overlay svg {
-    position: relative;
-    filter: drop-shadow(1px 1px 5px #000000);
-    -webkit-filter: drop-shadow(1px 1px 5px #000000);
-    -moz-filter: drop-shadow(1px 1px 5px #000000);
+    border-radius:50%;   
 }
 
 .ballWrap .ballWrap-overlay {
@@ -42,9 +34,6 @@
     mask-position:50% 50%;
     z-index: 100;
     display: block;
-    filter: drop-shadow(73px 10px 5px #000000);
-    -webkit-filter: drop-shadow(73px 10px 5px #000000);
-    -moz-filter: drop-shadow(73px 10px 5px #000000);
     transition-duration: 0s;
     /* animation: move-hole-2 2.33s linear infinite forwards; */
 }
@@ -57,8 +46,8 @@
     top:0;
     left:0;
     filter: drop-shadow(73px 10px 5px #000000);
--webkit-filter: drop-shadow(73px 10px 5px #000000);
--moz-filter: drop-shadow(73px 10px 5px #000000);
+    -webkit-filter: drop-shadow(73px 10px 5px #000000);
+    -moz-filter: drop-shadow(73px 10px 5px #000000);
 }
 
 @keyframes spin {

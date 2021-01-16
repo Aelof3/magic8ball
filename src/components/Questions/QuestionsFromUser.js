@@ -17,7 +17,7 @@ class QuestionsFromUser extends Component {
 
     questionCheck = () => {
         if (this.state.questions.length > 0) {
-            return <li className="recentQuestion">Questions you have asked:</li>    
+            return <li className="recentQuestion">Questions you asked most recently:</li>    
         } else {
             return "";
         }
