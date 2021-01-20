@@ -1,5 +1,6 @@
 # Capstone 3 - Magic 8 ball
-*the magic 8 ball we all know and love, online!*
+*The magic 8 ball we all know and love, online!*  
+*Made by: Richard Folea*  
 
 #### Live link: https://magic-8.vercel.app/    
 #### Client repo: https://github.com/Aelof3/magic8ball  

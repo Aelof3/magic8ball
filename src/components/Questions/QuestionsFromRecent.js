@@ -28,6 +28,10 @@ class QuestionsFromRecent extends Component {
     }
 
     componentDidMount(){
+        UserService.getRecentQuestions().then((data) => {
+            const recentQuestions = data.questions;
+            this.setState({recentQuestions});
+        });
         this.refreshQuestions();
     }
 
