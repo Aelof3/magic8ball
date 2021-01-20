@@ -23,7 +23,7 @@ class QuestionsFromRecent extends Component {
                     const recentQuestions = data.questions;
                     this.setState({recentQuestions});
                 });
-            },500)
+            },30000)
         })
     }
 

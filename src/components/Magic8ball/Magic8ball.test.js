@@ -1,12 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter } from 'react-router-dom'
-import App from './App'
+import Magic8ball from './Magic8ball'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
-  ReactDOM.render(<HashRouter>
-    <App />
-</HashRouter>, div)
+  ReactDOM.render(<Magic8ball />, div)
   ReactDOM.unmountComponentAtNode(div)
 })
